@@ -3,6 +3,24 @@
   "name": "Image Replacer",
   "description": "Changes Images",
   "version": "1.0",
+  "icons": {
+    "16": "Images/IMG_1050.png",
+    "32": "Images/IMG_1050.png",
+    "48": "Images/IMG_1050.png",
+    "128": "Images/IMG_1050.png"
+  },
+  "content_scripts": [
+    {
+      "js": ["script.js"],
+      "matches": ["<all_urls>"],
+      "web_accessible_resources": [
+        {
+          "resources": ["/images/*"],
+          "matches": ["<all_urls>"]
+        }
+      ]
+    }
+  ],
   "background": {
     "service_worker": "background.js"
   },
