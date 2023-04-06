@@ -1,0 +1,14 @@
+{
+  "manifest_version": 3,
+  "name": "Image Replacer",
+  "description": "Changes Images",
+  "version": "1.0",
+  "background": {
+    "service_worker": "background.js"
+  },
+  "action": {
+    "default_popup": "index.html"
+  },
+  "permissions": ["tabs", "unlimitedStorage"],
+  "host_permissions": ["https://*/*", "http://*/*"]
+}
